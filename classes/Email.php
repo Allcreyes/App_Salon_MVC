@@ -67,7 +67,7 @@ class Email
         $contenido = "<html>";
         $contenido .= "<p>Estimado(a)<strong> " . $this->nombre . " " . $this->aPaterno . "</strong>,</p><br>";
         $contenido .= "<p>Gracias por crear tu cuenta en <strong>Estética SHERLYN</strong>, ahora podrás acceder a  nuestros servicios, productos y promociones, solo debes confirmarla presionando el siguente enlace:</p><br>";
-        $contenido .= "<p>Presiona aquí para confirmar:<strong> <a href='https://esteticasherlyn.herokuapp.com/confirmar-cuenta?token=" . $this->token . "'>Confirmar Cuenta</a></strong></p><br>";
+        $contenido .= "<p>Presiona aquí para confirmar:<strong> <a href='http://". $_SERVER["HTTP_HOST"] . "/confirmar-cuenta?token=". $this->token . "'>Confirmar Cuenta</a></strong></p><br>";
         $contenido .= "<p>Si tu no solicitaste crear una cuenta, puedes ignorar este mensaje</p><hr>";
         $contenido .= "<p>Este correo electrónico contiene información legal confidencial y privilegiada.<br> Si Usted no es el destinatario a quien se desea enviar este mensaje, tendrá prohibido darlo a conocer a persona alguna, así como a reproducirlo o copiarlo.<br> Si recibe este mensaje por error, favor de notificarlo al remitente de inmediato y desecharlo de su sistema.</p>";
         $contenido .= "</html>";
@@ -118,8 +118,8 @@ class Email
 
         // Set HTML
         $contenido = "<html>";
-        $contenido .= "<p>Estimado(a)<strong> " . $this->nombre . " " . $this->aPaterno . "</strong>, has solicitado reestablecer tu contraseña, haz clic en el siguiente enlace para hacerlo.</p><br>";
-        $contenido .= "<p>Presiona aquí para reestablecer:<strong> <a href='https://esteticasherlyn.herokuapp.com/recuperar?token=" . $this->token . "'>Reestablecer Contraseña</a></strong></p><br>";
+        $contenido .= "<p>Estimado(a)<strong> " . $this->nombre . " " . $this->aPaterno . "</strong>, has solicitado reestablecer tu contraseña, haz clic el siguiente enlace para hacerlo.</p><br>";
+        $contenido .= "<p>Presiona aquí para reestablecer:<strong> <a href='http://". $_SERVER["HTTP_HOST"] . "/recuperar?token=" . $this->token . "'>Reestablecer Contraseña</a></strong></p><br>";
         $contenido .= "<p>Si tu no solicitaste este cambio, puedes ignorar el mensaje.</p><hr>";
         $contenido .= "<span>Este correo electrónico contiene información legal confidencial y privilegiada.<br> Si Usted no es el destinatario a quien se desea enviar este mensaje, tendrá prohibido darlo a conocer a persona alguna, así como a reproducirlo o copiarlo.<br> Si recibe este mensaje por error, favor de notificarlo al remitente de inmediato y desecharlo de su sistema.</span>";
         $contenido .= "</html>";
