@@ -34,7 +34,7 @@ class ApiController
             $citaServicio->guardar();
         }
         //Retornamos una respuesta
-        echo json_encode(['resultado' => $resultado]);
+        echo json_encode(['resultado' => $resultado], JSON_UNESCAPED_UNICODE);
     }
 
     public static function eliminar()
